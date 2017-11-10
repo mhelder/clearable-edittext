@@ -20,7 +20,7 @@ public class ClearableEditText extends AppCompatEditText {
     }
 
     public ClearableEditText(Context context, AttributeSet attrs) {
-        this(context, attrs, android.R.attr.editTextStyle);
+        this(context, attrs, android.support.design.R.attr.editTextStyle);
     }
 
     public ClearableEditText(Context context, AttributeSet attrs, int defStyleAttr) {

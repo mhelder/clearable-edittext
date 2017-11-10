@@ -20,7 +20,7 @@ public class ClearableAutoCompleteTextView extends AppCompatAutoCompleteTextView
     }
 
     public ClearableAutoCompleteTextView(Context context, AttributeSet attrs) {
-        this(context, attrs, android.R.attr.autoCompleteTextViewStyle);
+        this(context, attrs, android.support.design.R.attr.autoCompleteTextViewStyle);
     }
 
     public ClearableAutoCompleteTextView(Context context, AttributeSet attrs, int defStyleAttr) {

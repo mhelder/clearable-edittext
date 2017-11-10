@@ -20,7 +20,7 @@ public class ClearableTextInputEditText extends TextInputEditText {
     }
 
     public ClearableTextInputEditText(Context context, AttributeSet attrs) {
-        this(context, attrs, android.R.attr.editTextStyle);
+        this(context, attrs, android.support.design.R.attr.editTextStyle);
     }
 
     public ClearableTextInputEditText(Context context, AttributeSet attrs, int defStyleAttr) {
