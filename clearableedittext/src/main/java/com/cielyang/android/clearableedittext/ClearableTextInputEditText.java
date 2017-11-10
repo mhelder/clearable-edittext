@@ -47,4 +47,8 @@ public class ClearableTextInputEditText extends TextInputEditText {
     @Override public boolean onTouchEvent(MotionEvent event) {
         return mClearableHelper.onTouchEvent(event) && super.onTouchEvent(event);
     }
+
+    public void setOnClearListener(OnClearListener onClearListener) {
+        mClearableHelper.setOnClearListener(onClearListener);
+    }
 }

@@ -24,6 +24,7 @@ final class ClearableHelper implements TextWatcher {
     private final TextView mTarget;
 
     private Drawable mClearIconDrawable;
+    private OnClearListener mOnClearListener;
 
     private boolean mIsClearIconShown = false;
     private boolean mClearIconDrawWhenFocused = true;
@@ -65,6 +66,10 @@ final class ClearableHelper implements TextWatcher {
         return savedState.getSuperState();
     }
 
+    void setOnClearListener(OnClearListener onClearListener) {
+        mOnClearListener = onClearListener;
+    }
+
     private void showClearIcon(boolean show) {
         if (show) {
             // show icon on the right
@@ -103,6 +108,7 @@ final class ClearableHelper implements TextWatcher {
             mTarget.setText(null);
             event.setAction(MotionEvent.ACTION_CANCEL);
             showClearIcon(false);
+            if (mOnClearListener != null) mOnClearListener.onCleared();
             return false;
         }
         return true;

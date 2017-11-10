@@ -47,4 +47,8 @@ public class ClearableAutoCompleteTextView extends AppCompatAutoCompleteTextView
     @Override public boolean onTouchEvent(MotionEvent event) {
         return mClearableHelper.onTouchEvent(event) && super.onTouchEvent(event);
     }
+
+    public void setOnClearListener(OnClearListener onClearListener) {
+        mClearableHelper.setOnClearListener(onClearListener);
+    }
 }
